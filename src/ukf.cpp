@@ -30,12 +30,12 @@ UKF::UKF() {
 
   // initial state vector
   x_ = VectorXd(n_x_);
-  x_ << 1, 1, 1, 1, 1;
+  x_ << 1, 1, 1, 1, 0.1;
 
   // initial covariance matrix
   P_ = MatrixXd(n_x_, n_x_);
-  P_ << 1,    0, 0, 0, 0,
-           0,    1, 0, 0, 0,
+  P_ << 0.15,    0, 0, 0, 0,
+           0,    0.15, 0, 0, 0,
            0,    0, 1, 0, 0,
            0,    0, 0, 1, 0,
            0,    0, 0, 0, 1;
